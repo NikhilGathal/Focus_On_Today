@@ -1,0 +1,236 @@
+*
+{
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Poppins, sans-serif;
+  margin: 0;
+  background-color: rgba(72, 163, 0, 0.07);
+}
+
+main {
+  /* margin: 16px; */
+  padding: 0px 16px 32px;
+  /* margin-bottom:  16px; */
+}
+
+
+
+.title {
+  font-size: 64px;
+  color: #48a300;
+  text-align: center;
+}
+.title span {
+  color: #61481c;
+}
+.app-container {
+  
+  background-color: #fbfbfb;
+  max-width: 660px;
+  margin-inline: auto;
+  border-radius: 15px;
+  padding: 32px 48px;
+}
+
+.sun-icon {
+  vertical-align: middle;
+  margin-left: 16px;
+}
+
+.progress-label {
+  font-size: 14px;
+  color: #858585;
+  margin-bottom: 20px;
+}
+
+.progress-bar {
+  height: 30px;
+  background-color: rgba(72, 163, 0, 0.1);
+  border-radius: 15px;
+  margin-bottom: 42px;
+}
+
+.progress-value {
+  width: 0;
+  height: 100%;
+  background-color: #48a300;
+  border-radius: 15px;
+  font-weight: 500;
+  font-size: 10px;
+  color: #eeffe0;
+  display: flex;
+  align-items: center;
+  /* padding-left: 20px; */
+  overflow: hidden;
+  transition: width 2s ease-in-out;
+}
+
+.progress-value span 
+{
+  padding-left: 20px;
+  min-width: max-content;
+}
+
+.error-label {
+  font-size: 12px;
+  color: #ff5151;
+  margin-top: 4px;
+display: none;
+}
+
+.show-error .error-label
+{
+  display: block;
+}
+
+.goal-container {
+  background-color:white;
+  border-radius: 17px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  margin-bottom: 42px;
+  height: 82px;
+  display: flex;
+  align-items: center;
+  padding: 0px 22px;
+
+  /* OR for above code make checkbox display inline block and vertical-align: middle; and below padding line also*/
+
+  /* padding: 40px 022px; */
+}
+
+.goal-input {
+  
+  border: none;
+  outline: none;
+  /* margin-left: 20px; changed to padding to allow input to focus when click on its left side also */
+  padding-left: 20px;
+  /* height: 100%; if prent has height in px then other use align self */
+  height: 100%;
+  /* align-self: stretch; if disp is flex */
+
+  font-family: inherit;
+  font-size: 16px;
+
+width: 100%;
+
+  /* flex-grow: 1; */
+  /* background-color: white; */
+}
+.goal-input::placeholder {
+  color: #d9d9d9;
+}
+
+.custom-checkbox {
+  /* display: inline-block;
+  vertical-align: middle; */
+  width: 24px;
+  height: 24px;
+  border-radius: 50px;
+  border: 2px solid rgba(97, 72, 28, 0.3);
+  flex-shrink: 0;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+.custom-checkbox .a 
+{
+  flex-grow: 0;
+  flex-shrink: 1;
+}
+
+/* .custom-checkbox:hover 
+{ directly also we can give in custom-checkbox class
+   cursor: pointer;
+} */
+.quote {
+  text-align: center;
+  font-weight: 500;
+}
+.made-with {
+  font-weight: 500;
+  font-size: 10px;
+  text-align: center;
+  color: #858585;
+  margin-top: 64px;
+}
+
+.completed .custom-checkbox
+{
+  background-color: #48a300;
+  border-color: #48a300;
+}
+
+.completed .goal-input {
+  color: #48A300;
+  text-decoration-line: line-through;
+}
+
+.check-icon 
+{
+  display: none;
+}
+
+.completed .check-icon 
+{
+  display: block;
+}
+
+.add-card {
+  display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 36px;
+    cursor: pointer;
+    background-color: cadetblue;
+    color: black;
+    /* position: relative;
+    bottom: 3px;
+    right: -232px; */
+    /* border-radius: 100%; */
+    height: 50px;
+    max-width: 450px;
+    line-height: 10px;
+    margin-inline: auto;
+}
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .title {
+    font-size: 32px;
+  }
+  .app-container {
+    padding: 16px 32px;
+  }
+  .goal-container 
+  {
+    height: 64px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+  }
+  .custom-checkbox 
+  {
+    height: 20px;
+    width: 20px;
+  }
+  .made-with 
+  {
+    margin-top: 32px;
+  }
+  .progress-bar 
+  {
+    height: 24px;
+  }
+
+
+}
+
